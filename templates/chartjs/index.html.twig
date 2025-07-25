@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChartjsController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {  max-width: 600px; width: 100%; font: 18px/1.5 sans-serif; }
+    /*.example-wrapper code { background: #F5F5F5; padding: 2px 6px; }*/
+</style>
+<div class="container">
+    <div class="row mb-3 mt-5">
+        <div class="col example-wrapper">
+            {{ render_chart(chart1) }}
+        </div>
+        <div class="col example-wrapper">
+            {{ render_chart(chart2) }}
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row mb-3 mt-5">
+            <div class="col example-wrapper">
+                {{ render_chart(chart3) }}
+            </div>
+            <div class="col example-wrapper">
+                {{ render_chart(chart4) }}
+            </div>
+        </div>
+
+</div>
+{% endblock %}

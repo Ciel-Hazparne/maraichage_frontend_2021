@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit index{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Liste des produits</h1>
+        <div class="text-right">
+            <a href="{{ path('produit_new') }}" class="btn btn-outline-success">Créer un nouveau produit</a>
+        </div>
+        <table class="table table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for produit in produits %}
+                <tr>
+                    <td>{{ produit.id }}</td>
+                    <td>{{ produit.nom }}</td>
+                    <td>{{ produit.prix }}</td>
+                    <td>{{ produit.quantite }}</td>
+                    <td>
+                        <a class="btn btn-outline-info btn-sm" href="{{ path('produit_show', {'id': produit.id}) }}">Détails</a>
+                        <a class="btn btn-outline-warning btn-sm" href="{{ path('produit_edit', {'id': produit.id}) }}">Modif</a>
+                        <form method="post" action="{{ path('produit_delete', {id: produit.id}) }}"
+                              style="display: inline-block"
+                              onsubmit="return confirm('Confirmez-vous la demande de suppression du produit {{ produit.nom }}?')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}">
+                            <button class="btn btn-outline-danger btn-sm">Suppr</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="pagination">
+            {{ knp_pagination_render(produits) }}
+        </div>
+    </div>
+{% endblock %}
+
