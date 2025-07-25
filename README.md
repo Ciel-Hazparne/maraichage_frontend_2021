@@ -41,10 +41,11 @@ Ils sont notamment soumis aux aléas climatiques (températures, humidité) qui 
 
 ## 2 - Partie personnelle Alexandre
 Dans cette partie du projet , je dois créer un site web afin que le maraîcher puisse gérer ses
-produits (créer , modifier , supprimer , lister). Le site présentera aussi un panier afin de
-pouvoir exporter la commande du client au format PDF. Le site permet également au
-maraîcher de pouvoir gérer et visualiser les données de la serre et du champ ( température
-et humidité) via des graphiques.Les clients ainsi que le maraîcher peuvent se connecter au
-site via leur compte. Le compte du maraîcher dispose de plus de droit comme notamment
-l'accès à la modification des produits ainsi que la gestion des températures et humidités.Le
-client n’a accès qu’à la page d’accueil ainsi qu’au panier.
+produits (créer , modifier , supprimer , lister).  
+Le site présentera aussi un panier afin de pouvoir exporter la commande du client au format PDF.  
+Le site permet également au maraîcher de pouvoir gérer et visualiser les données de la serre et du champ (température
+et humidité) via des graphiques.  
+Les clients ainsi que le maraîcher peuvent se connecter au site via leur compte.  
+Le compte du maraîcher dispose de plus de droit comme notamment l'accès à la modification des produits ainsi 
+que la gestion des températures et humidités.  
+Le client n’a accès qu’à la page d’accueil ainsi qu’au panier.
