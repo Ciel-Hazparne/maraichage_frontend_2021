@@ -1,4 +1,4 @@
-# Projet serre de maraîchage connectée
+# Projet serre de maraîchage connectée (Front_end)
 - Symfony 4.4
 - Api Platform
 - Conteneur LXC dans Proxmox pour l'hébergement
